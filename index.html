@@ -2,25 +2,37 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Javascript + DOM</title>
+	<title>To Do List Project</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="bootstrap.css">
 </head>
 <body>
-	<h1>TO-DO List</h1>
-	<div class="main">
-		<div class="section">
-			<p id="first">Get it Done today</p>
-			<input id="userinput" type="text" placeholder="enter to-dos">
-			<button id="enter">Enter</button>
-			<ul>
-				<li class="bold red" random="23">Eat Breakfast</li>
-				<li>Pray</li>
-				<li>Exercise</li>
-				<li>Stretching</li>
-				<li>Open FB</li>
-				<li>Kiss Wife</li>
-			</ul>
-		</div>
+	<div class="main row d-flex justify-content-center align-center">
+			<div class="mt-5 col-md-10">
+					<h1 class="text-center mt-5">TO-DO List</h1>
+					<p class="text-center">Get it Done today</p>
+					<div class="container">
+						<form class="col-lg-8 mx-auto">
+					      <div class="d-flex">
+					    			<input id="userinput" type="text" class="form-control w-75" placeholder="enter to-dos">
+										<!-- <div class="input-group-append"> -->
+										<button id="enter" type="button" class="btn btn-primary ml-1">Add</button>
+						    		<button id="removeAll" type="button" class="btn btn-danger ml-1" onclick="delAll()">Clear List</button>
+										<!-- </div>	 -->
+					      </div>
+					      <div class="d-flex justify-content-center col-sm-12 col-lg">
+					          <ul id="todolist" class="mt-4 w-75">
+					    				<li class="done" random="23">Eat Breakfast</li>
+					    				<li>Pray</li>
+					    				<li>Exercise</li>
+					    				<li>Stretching</li>
+					    				<li>Open FB</li>
+					    				<li>Kiss Wife</li>
+					    			</ul>
+					      </div>
+						</form>
+					</div>
+			</div>
 	</div>
 	<script type="text/javascript" src="script.js"></script>
 </body>
